@@ -1,0 +1,34 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">Home</a></li>
+    <li><a ng-href="/#/todolist">Todo List</a></li>
+    <li class="active"><a ng-href="/#/github">Github Search</a></li>
+  </ul>
+  <h3 class="text-muted">Angular examples</h3>
+</div>
+
+<form class="form-inline" role="form" ng-submit="searchRepositories()">
+  <div class="form-group">
+    <input type="text" class="form-control" ng-model="searchTerm">
+  </div>
+  <input type="submit" class="btn btn-default" value="Search">
+</form>
+
+<br>
+
+<table class="table table-bordered table-condensed">
+  <tr>
+    <th>Name</th>
+    <th>Owner</th>
+    <th>Description</th>
+    <th>Forks</th>
+    <th>Followers</th>
+  </tr>
+  <tr ng-repeat="repo in repositories">
+    <td><a href="{{ repo.url }}">{{ repo.name }}</a></td>
+    <td>{{ repo.owner }}</td>
+    <td>{{ repo.description }}</td>
+    <td>{{ repo.forks }}</td>
+    <td>{{ repo.followers }}</td>
+  </tr>
+</table>  

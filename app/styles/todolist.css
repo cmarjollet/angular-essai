@@ -1,0 +1,9 @@
+.done-true {
+  color: gray;
+  text-decoration: line-through;
+}
+ul.todos {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}

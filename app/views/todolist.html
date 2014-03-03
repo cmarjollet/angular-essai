@@ -1,0 +1,23 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li><a ng-href="#">Home</a></li>
+    <li class="active"><a ng-href="/#/todolist">Todo List</a></li>
+    <li><a ng-href="/#/github">Github Search</a></li>
+  </ul>
+  <h3 class="text-muted">Angular examples</h3>
+</div>
+
+<p>{{ todos.length }} remaining tasks</p>
+<ul class="todos">
+  <li ng-repeat="todo in todos">
+    <input type="checkbox" id="task-{{ $index }}" ng-model="todo.done">
+    <label for="task-{{ $index }}" class="done-{{ todo.done }}">{{ todo.name }}</label> 
+  </li>
+</ul>
+
+<form ng-submit="addTodo()">
+  <input type="text" ng-model="todoText">
+  <input type="submit" value="Add">
+</form>
+
+<a href="" ng-click="clearCompletedTodos()">Clear completed tasks</a>
