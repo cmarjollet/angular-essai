@@ -9,7 +9,7 @@ angular.module('angularEssaiApp').controller('TodoCtrl', function ($scope) {
   ];
 
   /**
-   * Add a new task to todo list
+   * Add a new task
    */
   $scope.addTodo = function() {
     $scope.todos.push({
@@ -20,7 +20,7 @@ angular.module('angularEssaiApp').controller('TodoCtrl', function ($scope) {
   };
 
   /**
-   * Remove completed tasks from todo list
+   * Remove completed tasks
    */
   $scope.clearCompletedTodos = function() {
     $scope.todos = $scope.todos.filter(function(todo) {
