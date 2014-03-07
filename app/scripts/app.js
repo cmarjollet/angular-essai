@@ -20,6 +20,10 @@ angular.module('angularEssaiApp', [
         templateUrl: 'views/github.html',
         controller: 'GithubCtrl'
       })
+      .when('/gallery', {
+        templateUrl: 'views/gallery.html',
+        controller: 'GalleryCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
